@@ -1,0 +1,18 @@
+development:
+  adapter: postgresql
+  database: sidekiqrails_development
+  pool: 5
+  timeout: 5000
+  user: postgres
+test:
+  adapter: postgresql
+  database: sidekiqrails_test
+  pool: 5
+  timeout: 5000
+  user: postgres
+production:
+  adapter: postgresql
+  database: sidekiqrails_production
+  pool: 5
+  timeout: 5000
+  user: postgres
