@@ -1,5 +1,9 @@
 # inside config/routes.rb
 Rails.application.routes.draw do
+
+  resources :cars, only: %i[index show edit update]
+
+
   get "welcome/index"
 
   # route where any visitor require the helloWorldJob to be triggered
