@@ -1,0 +1,40 @@
+<div style="margin: 50px;">
+
+  <% flash.each do |key, message| %>
+      <% if key=='notice' %>
+        <p style="color: green; font-size: 1.5em">
+      <% else %>
+        <p style="color: red; font-size: 1.5em">
+      <% end %>
+      <%= message %></p>
+  <% end %>
+
+<% if @cars %>
+<%= will_paginate @cars %>
+  <table bgcolor="ffffdd" text-align="center" border=1 cellspacing=0>
+    <tr>
+      <th style="width: 5%;">Id</th>
+      <th style="width: 13%;">Brand</th>
+      <th style="width: 13%;">Model</th>
+      <th style="width: 13%;">Engine volume</th>
+      <th style="width: 13%;">Price last year</th>
+      <th style="width: 13%;">Price now</th>
+      <th style="width: 13%;">Calculate price difference</th>
+      <th style="width: 13%;">Actions</th>
+    </tr>
+
+    <% @cars.each do |car| %>
+    <tr>
+      <td align="center"><%= car[:id] %></td>
+      <td align="center"><%= car[:brand] %></td>
+      <td align="center"><%= car[:model] %></td>
+      <td align="center"><%= car[:engine_volume] %></td>
+      <td align="center"><%= car[:price_last_year] %></td>
+      <td align="center"><%= car[:price_now] %></td>
+      <td align="center"><%= link_to 'calculate', calculate_price_cars_path(car) %></td>
+      <td align="center"><%= link_to 'edit', edit_car_path(car) %></td>
+    </tr>
+    <% end %>
+  </table>
+  <% end %>
+</div>

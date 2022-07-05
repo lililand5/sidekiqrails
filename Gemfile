@@ -28,3 +28,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'redis'
 gem 'sidekiq'
+gem 'will_paginate', '~> 3.3'
