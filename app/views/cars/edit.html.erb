@@ -1,0 +1,35 @@
+<div style="margin: 50px;">
+  <%= link_to cars_path do %>
+    <button class="back-button"><- Back to all cars </button>
+  <% end %>
+
+  <%= form_with model: @car do |form| %>
+    <div class='parameter-row'>
+      <%= form.label :id, class: 'input-label' %>
+      <%= form.text_field :id, value: @car[:id], class: 'text-input', required: true %>
+    </div>
+    <div class='parameter-row'>
+      <%= form.label :brand, class: 'input-label' %>
+      <%= form.text_field :brand, value: @car[:brand], class: 'text-input' %>
+    </div>
+    <div class='parameter-row'>
+      <%= form.label :model, class: 'input-label' %>
+      <%= form.text_field :model, value: @car[:model], class: 'text-input' %>
+    </div>
+    <div class='parameter-row'>
+      <%= form.label :engine_volume, class: 'input-label' %>
+      <%= form.text_field :engine_volume, engine_volume: @car[:engine_volume], class: 'text-input' %>
+    </div>
+    <div class='parameter-row'>
+      <%= form.label :price_last_year, class: 'input-label' %>
+      <%= form.text_field :price_last_year, price_last_year: @car[:price_last_year], class: 'text-input' %>
+    </div>
+    <div class='parameter-row'>
+      <%= form.label :price_now, class: 'input-label' %>
+      <%= form.text_field :price_now, price_now: @car[:price_now], class: 'text-input' %>
+    </div>
+    <div class='parameter-row'>
+      <%= form.submit 'Update car' %>
+    </div>
+  <% end %>
+</div>
