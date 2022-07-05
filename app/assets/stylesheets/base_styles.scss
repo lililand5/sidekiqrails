@@ -1,0 +1,53 @@
+.block {
+  display: block;
+}
+
+.logo {
+  width: 200px;
+  height: 200px;
+}
+
+.logo-input-label {
+  @extend .block;
+  @extend .logo;
+  border: 1px solid gray;
+}
+
+.logo-input {
+  display: none;
+}
+
+.text-input {
+  width: 200px !important;
+}
+
+.input-label {
+  text-align: end;
+  margin-right: 10px;
+  width: 110px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.btn-danger {
+  color: red !important;
+}
+
+.parameter-row {
+  width: 400px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 10px 0 0 10px;
+}
+
+.back-button {
+  margin: 20px 0;
+}
